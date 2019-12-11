@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Paraphraser</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <style>
+    /*basic reset*/
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /*adding a black bg to the body to make things clearer*/
+    body {
+      background: black;
+      overflow: hidden;
+    }
+
+    canvas {
+      position: absolute;
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body style="background-color: rgb(8, 8, 8);">
+  <canvas id="c"></canvas>
+  <h1 style="color:white; font-size: 45pt;padding-top: 40px; padding-bottom: 40px" align="center">Paraphraser
+  </h1>
+  <div style="width:1000px; margin:auto" align="center">
+    <!-- <img  src="{{ url_for('static',    filename='assets/logo.png') }}"> -->
+    <form method="POST" style="width: 100%;">
+      <div class="md-form">
+        <textarea style="font-size: 12pt; resize: none; height: 150px; width: 400px" name="text" rows="10" cols="30"
+          class="md-textarea form-control">{{ text_input }}</textarea>
+      </div>
+      <br>
+      <button style="font-size: 16pt; display: block; margin: auto; overflow:auto;" type="submit"
+        class="btn btn-success">Get Paraphrase</button>
+    </form>
+    <h3 style="color: white; font-size: 20pt; padding: 20px">Result: <i>{{ paraphrase }}</i></h3>
+  </div>
+
+
+</html>
