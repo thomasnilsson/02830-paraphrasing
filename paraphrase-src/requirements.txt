@@ -1,5 +1,0 @@
-Flask
-Werkzeug
-wtforms
-tensorflow==1.13.1
-keras==2.2.4
